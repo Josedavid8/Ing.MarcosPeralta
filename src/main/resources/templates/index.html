@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Empresa XYZ</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', sans-serif;
+            color: #8B0000;
+            background: url('/imagenes/IMG_0691-1024x667.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .contenido-principal {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* oscurece para mejor contraste */
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .boton {
+            background-color: #D9A066;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .boton:hover {
+            background-color: #8B0000;
+            transform: translateY(-2px);
+        }
+
+        #contenido {
+            margin-top: 30px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenido-principal">
+    <h1>¡JUNTOS HACEMOS LA DIFERIENCIA!
+        Creando oportunidades con nuestra Cooperativa Comunitaria Juvenil</h1>
+    <div>
+        <button class="boton" onclick="mostrar('quienes')">¿Que es una Cooperativa Juvenil?</button>
+        <button class="boton" onclick="mostrar('mision')">Misión</button>
+        <button class="boton" onclick="mostrar('vision')">Visión</button>
+        <button class="boton" onclick="mostrar('productos')">¿Como funcionamos?</button>
+        <button class="boton" onclick="mostrar('misionn')">Nuestros Proyectos e Iniciativas</button>
+        <button class="boton" onclick="mostrar('misionnn')">Transformando nuestra comunidad</button>
+    </div>
+    <div id="contenido"></div>
+</div>
+
+<script>
+    const datos = {
+      quienes: "<h2></h2><p>Una asociacion autonoma de jovenes unidos voluntariamente.</p>",
+      mision: "<h2></h2><p>Generar oportunidades de empleo para jovenes.</p>",
+      vision: "<h2></h2><p>Ser un referente de emprendimiento juvenil cooperativo</p>",
+      productos: "<h2></h2><ul><li>*Adhesion voluntaria y abierta.</li><li>*Control democratico de los miembros.</li><li>*Interes por la comunidad.</li><li>*Autonomia e Independencia.</li></ul></ul>",
+      misionn: "<h2></h2><ul><li>*Servicios y/o Productos.</li><li>*Actividades adicionales.</li></ul></ul>",
+      misionnn: "<h2></h2><ul><li>*Generacion de empleo local.</li><li>*Impulso a la economia local.</li><li>*Desarrollo de talentos.</li><li>*Modelo de emprendimiento.</li></ul></ul>",
+
+    };
+
+    function mostrar(seccion) {
+        const cont = document.getElementById("contenido");
+        cont.innerHTML = datos[seccion];
+        cont.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
