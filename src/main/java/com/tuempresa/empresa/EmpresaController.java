@@ -44,6 +44,26 @@ public class EmpresaController {
         public String transformacion() {
             return "transformacion"; // transformacion.html
         }
+    @GetMapping("/proyectos-sociales.html")
+    public String proyectosSocial() {
+        return "proyectos-sociales";
     }
+
+    @GetMapping("/proyectos-ambientales.html")
+    public String proyectosAmbiental() {
+        return "proyectos-ambientales";
+    }
+
+    @GetMapping("/proyectos-culturales.html")
+    public String proyectosCulturales() {
+        return "proyectos-culturales";
+    }
+
+    @GetMapping("/proyectos-productos.html")
+    public String productos() {
+        return "proyectos-productos";
+    }
+
+}
 
 

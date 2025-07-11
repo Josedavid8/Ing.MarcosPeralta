@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyectos y Productos Artesanales</title>
+  <style>
+    /* Copiado del HTML base */
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background: url('/imagenes/depositphotos_5312984-stock-photo-burlap-texture.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .contenido-principal {
+        flex: 1;
+        padding: 40px 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        color: #FFD700;
+        text-shadow: 1px 1px 3px #000;
+        text-align: center;
+    }
+
+    .producto {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto h2 {
+        margin: 10px 0 5px;
+        color: #D9A066;
+        text-shadow: 1px 1px 2px #000;
+    }
+
+    .producto img {
+        max-width: 250px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    .producto p {
+        font-size: 1em;
+        line-height: 1.4;
+        margin: 10px 0;
+        text-align: center;
+        max-width: 700px;
+    }
+
+    .boton-regresar {
+        position: fixed;
+        bottom: 90px;
+        left: 20px;
+        z-index: 1000;
+        background-color: #D9A066;
+        color: white;
+        padding: 12px 30px;
+        font-size: 18px;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .boton-regresar:hover {
+        background-color: #8B0000;
+        transform: translateY(-3px);
+    }
+
+    .contacto {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 15px;
+        box-shadow: 0 -4px 10px rgba(0,0,0,0.6);
+        z-index: 500;
+    }
+
+    .contacto h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #FFD700;
+    }
+
+    .info-contacto p {
+        margin: 5px 0;
+    }
+
+    .info-contacto a {
+        color: #FFD700;
+        text-decoration: none;
+    }
+
+    .info-contacto a:hover {
+        text-decoration: underline;
+    }
+
+    .qr-section {
+        text-align: center;
+    }
+
+    .qr-section p {
+        font-size: 0.8em;
+        margin-bottom: 5px;
+        color: #FFD700;
+    }
+
+    .qr-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+
+<a href="/transformacion.html" class="boton-regresar">← Volver a Transformacion</a>
+
+<div class="contenido-principal">
+  <h1>Productos Artesanales de Nuestra Cooperativa</h1>
+
+  <!-- Fragmento modificado del HTML (solo los <img>) -->
+
+  <!-- Producto 1 -->
+  <div class="producto">
+    <h2>1. Alebrije de Madera</h2>
+    <img src="/imagenes/alebrijes_oaxaca_taller.jpg" alt="Alebrije de Madera">
+    <p>Coloridas figuras talladas a mano en madera de copal, representando seres fantásticos típicos de Oaxaca.</p>
+  </div>
+
+  <!-- Producto 2 -->
+  <div class="producto">
+    <h2>2. Huipil Bordado</h2>
+    <img src="/imagenes/332394618_747530630099378_2128061281060222703_n.jpg" alt="Huipil Bordado">
+    <p>Blusa tradicional tejida y bordada con motivos florales y geométricos de la región de Veracruz.</p>
+  </div>
+
+  <!-- Producto 3 -->
+  <div class="producto">
+    <h2>3. Cerámica de Barro Negro</h2>
+    <img src="/imagenes/ceramica.jpg" alt="Cerámica de Barro Negro">
+    <p>Elegantes piezas de cerámica pulida y cocida en hornos artesanales, únicas de Oaxaca.</p>
+  </div>
+
+  <!-- Producto 4 -->
+  <div class="producto">
+    <h2>4. Joyería de Filigrana</h2>
+    <img src="/imagenes/joyeria fili.jpg" alt="Joyería de Filigrana">
+    <p>Delicados collares, pulseras y aretes trabajados en hilo de plata por artesanos de Veracruz.</p>
+  </div>
+
+  <!-- Producto 5 -->
+  <div class="producto">
+    <h2>5. Cestería de Palma</h2>
+    <img src="/imagenes/cesteria.jpg" alt="Cestería de Palma">
+    <p>Cestas y canastas tejidas con palma real, perfectas para decoración y uso cotidiano.</p>
+  </div>
+
+  <!-- Producto 6 -->
+  <div class="producto">
+    <h2>6. Mezcal Artesanal</h2>
+    <img src="/imagenes/mezcal.webp" alt="Mezcal Artesanal">
+    <p>Destilado tradicional de agave, producido en pequeños lotes con métodos ancestrales.</p>
+  </div>
+
+  <!-- Producto 7 -->
+  <div class="producto">
+    <h2>7. Chocolate Artesanal</h2>
+    <img src="/imagenes/chocolate.jpeg" alt="Chocolate Artesanal">
+    <p>Tabletas de chocolate hechas con cacao orgánico y azúcar de caña, al estilo tradicional.</p>
+  </div>
+
+  <!-- Producto 8 -->
+  <div class="producto">
+    <h2>8. Miel de Abeja</h2>
+    <img src="/imagenes/miel.webp" alt="Miel de Abeja">
+    <p>Miel pura recolectada de colmenas gestionadas por jóvenes apicultores de Veracruz.</p>
+  </div>
+
+  <!-- Producto 9 -->
+  <div class="producto">
+    <h2>9. Jabón Artesanal</h2>
+    <img src="/imagenes/jabon.jpg" alt="Jabón Artesanal">
+    <p>Jabones elaborados con aceites vegetales y esencias naturales, suaves para la piel.</p>
+  </div>
+
+  <!-- Producto 10 -->
+  <div class="producto">
+    <h2>10. Alebrije de Cartonería</h2>
+    <img src="/imagenes/alebrije arton.jpg" alt="Alebrije de Cartonería">
+    <p>Figuras ligeras hechas con papel y cartón, pintadas a mano con vivos colores.</p>
+  </div>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

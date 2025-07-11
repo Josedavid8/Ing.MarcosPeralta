@@ -67,9 +67,19 @@
 
         .boton-regresar {
             position: fixed;
-            bottom: 90px; /* Altura suficiente sobre la sección contacto */
+            bottom: 90px;
             left: 20px;
             z-index: 1000;
+        }
+
+        .botones-proyectos {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1001;
         }
 
         .contacto {
@@ -82,7 +92,6 @@
             color: #fff;
             font-size: 15px;
             box-shadow: 0 -4px 10px rgba(0,0,0,0.6);
-            z-index: 500;
         }
 
         .contacto h3 {
@@ -120,11 +129,19 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.4);
         }
+
+        .contenido-principal::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .contenido-principal::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 215, 0, 0.6);
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
 
-<!-- Botón fijo por encima de la sección de contacto -->
 <a href="/" class="boton boton-regresar">Volver al inicio</a>
 
 <div class="contenido-principal">
@@ -135,13 +152,20 @@
     </p>
 </div>
 
+<div class="botones-proyectos">
+    <a href="/proyectos-sociales.html" class="boton">Proyectos Sociales</a>
+    <a href="/proyectos-ambientales.html" class="boton">Proyectos Ambientales</a>
+    <a href="/proyectos-culturales.html" class="boton">Proyectos Culturales</a>
+    <a href="/proyectos-productos.html" class="boton">Productos Artesanales</a>
+</div>
+
 <div class="contacto">
     <div>
         <h3>📞 Contáctanos</h3>
         <div class="info-contacto">
             <p><strong>📱 Teléfono:</strong> +52 951 185 0801</p>
             <p><strong>✉️ Email:</strong> <a href="pm2585842@gmail.com">contacto@cooperativajuvenil.mx</a></p>
-            <p><strong>📍 Dirección:</strong> Ferrocarril 196, Acatlan de Perez Figueroa, 68420 Acatlán de Pérez Figueroa, Oax.</p>
+            <p><strong>📍 Dirección:</strong> Ferrocarril 196, Acatlán de Pérez Figueroa, 68420 Acatlán de Pérez Figueroa, Oax.</p>
         </div>
     </div>
     <div class="qr-section">
@@ -149,5 +173,6 @@
         <img src="/imagenes/Captura de pantalla 2025-07-10 a la(s) 9.53.53 p.m..png" alt="QR de contacto" class="qr-img">
     </div>
 </div>
+
 </body>
 </html>
