@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestros Proyectos e Iniciativas</title>
+    <style>
+        body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: url('/imagenes/depositphotos_5312984-stock-photo-burlap-texture.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+        .contenido-principal {
+            flex: 1;
+            padding: 40px 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #FFD700;
+            text-shadow: 1px 1px 3px #000;
+        }
+        .imagen-principal {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+            display: block;
+        }
+        .texto-contenido {
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+        .contacto {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.55); /* ← más claro */
+  color: #fff;
+  font-size: 15px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.6);
+}
+
+        .contacto h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+        .info-contacto p {
+            margin: 5px 0;
+        }
+        .info-contacto a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        .info-contacto a:hover {
+            text-decoration: underline;
+        }
+        .qr-section {
+            text-align: center;
+        }
+        .qr-section p {
+            font-size: 0.8em;
+            margin-bottom: 5px;
+            color: #FFD700;
+        }
+        .qr-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+        }
+        .boton {
+    display: inline-block;
+    background-color: #D9A066;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.boton:hover {
+    background-color: #8B0000;
+    transform: translateY(-3px);
+}
+
+    </style>
+</head>
+<body>
+<div class="contenido-principal">
+    <h1>Nuestros Proyectos e Iniciativas</h1>
+    <img src="/imagenes/images.jpeg" alt="Proyectos e Iniciativas" class="imagen-principal">
+    <p class="texto-contenido">
+        Desarrollamos iniciativas que promueven el emprendimiento juvenil, la educación financiera, el desarrollo de habilidades técnicas y el fortalecimiento del tejido social en nuestras comunidades.
+    </p>
+    <a href="/" class="boton">Volver al inicio</a>
+
+</div>
+
+<div class="contacto">
+    <div>
+        <h3>📞 Contáctanos</h3>
+        <div class="info-contacto">
+            <p><strong>📱 Teléfono:</strong> +52 951 185 0801</p>
+            <p><strong>✉️ Email:</strong> <a href="pm2585842@gmail.com">contacto@cooperativajuvenil.mx</a></p>
+            <p><strong>📍 Dirección:</strong> Ferrocarril 196, Acatlan de Perez Figueroa, 68420 Acatlán de Pérez Figueroa, Oax.</p>
+        </div>
+    </div>
+    <div class="qr-section">
+        <p>Escanea el código QR para conocer más:</p>
+        <img src="/imagenes/inauguran-en-ecatepec-primer-encuentro-artesanal-intermunicipal-2025_11340481-5494-4731-a274-8834dc145feb_mediarawimage=true.jpeg" alt="QR de contacto" class="qr-img">
+    </div>
+</div>
+</body>
+</html>

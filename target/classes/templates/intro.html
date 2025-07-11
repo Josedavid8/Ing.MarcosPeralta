@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Intro Video</title>
+    <style>
+        html, body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          background: url('/imagenes/depositphotos_5312984-stock-photo-burlap-texture.jpg') no-repeat center center fixed;
+          background-size: cover;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: 'Segoe UI', sans-serif;
+        }
+
+        #start-button {
+          padding: 16px 40px;
+          background: linear-gradient(135deg, #FFD700, #FFA500);
+          color: #000;
+          font-size: 20px;
+          font-weight: bold;
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+          animation: pulse 2s infinite;
+          z-index: 2;
+        }
+
+        @keyframes pulse {
+          0% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
+          50% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); }
+          100% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
+        }
+
+        #video-container {
+          display: none;
+          position: fixed;
+          top: 0; left: 0;
+          width: 100%;
+          height: 100%;
+          background: transparent; /* fondo transparente para que se vea la imagen */
+          justify-content: center;
+          align-items: center;
+          z-index: 10;
+        }
+
+        #intro-video {
+          max-width: 90vw;
+          max-height: 90vh;
+          border-radius: 12px;
+          background: transparent;
+          z-index: 11;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Botón "Continuar" -->
+<button id="start-button">Continuar</button>
+
+<!-- Video oculto inicialmente -->
+<div id="video-container">
+    <video id="intro-video" playsinline>
+        <source src="/videos/videoplayback.mp4" type="video/mp4" />
+        Tu navegador no soporta video HTML5.
+    </video>
+</div>
+
+<script>
+    const startButton = document.getElementById('start-button');
+    const videoContainer = document.getElementById('video-container');
+    const video = document.getElementById('intro-video');
+
+    startButton.addEventListener('click', () => {
+      startButton.style.display = 'none';
+      videoContainer.style.display = 'flex';
+      video.currentTime = 5;
+      video.muted = false;
+      video.play();
+    });
+
+    video.addEventListener('timeupdate', () => {
+      if (video.currentTime >= 14) {
+        video.pause();
+        localStorage.setItem('videoVisto', 'true'); // ← guardar que ya lo vio
+        window.location.href = '/'; // ir al index
+      }
+    });
+</script>
+
+</body>
+</html>
